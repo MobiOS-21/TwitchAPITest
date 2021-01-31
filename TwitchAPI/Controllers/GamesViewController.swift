@@ -25,6 +25,7 @@ class GamesViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.dataSource = self
 
         refreshControl = UIRefreshControl()
+        refreshControl.tintColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
         refreshControl.addTarget(self, action: #selector(reloadData(with:)), for: .valueChanged)
         tableView.insertSubview(refreshControl, at: 0)
         reloadData(with: false)
